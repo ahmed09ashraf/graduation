@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+// Displaying the reservation form
+Route::get('/', [StudentController::class, 'index'])->name('reservations.index');
+
+// Submitting the reservation form
+Route::post('/', [StudentController::class, 'store'])->name('reservations.store');
+
+// Admin dashboard and management
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+
+// Routes for colleges
+Route::get('/admin/colleges', [AdminController::class, 'colleges'])->name('admin.colleges');
+Route::post('/admin/colleges', [AdminController::class, 'storeColleges'])->name('admin.colleges.store');
+Route::delete('/admin/colleges/{id}', [AdminController::class, 'deleteCollege'])->name('admin.colleges.delete');
+
+// Routes for departments
+Route::get('/admin/departments', [AdminController::class, 'departments'])->name('admin.departments');
+Route::post('/admin/departments', [AdminController::class, 'storeDepartments'])->name('admin.departments.store');
+Route::delete('/admin/departments/{id}', [AdminController::class, 'deleteDepartment'])->name('admin.departments.delete');
+
+// Routes for uniforms
+Route::get('/admin/uniforms', [AdminController::class, 'uniforms'])->name('admin.uniforms');
+Route::post('/admin/uniforms', [AdminController::class, 'storeUniforms'])->name('admin.uniforms.store');
+Route::delete('/admin/uniforms/{id}', [AdminController::class, 'deleteUniform'])->name('admin.uniforms.delete');

@@ -1,4 +1,6 @@
 const mix = require('laravel-mix');
+require('events').EventEmitter.defaultMaxListeners = 50;
+
 
 /*
  |--------------------------------------------------------------------------
@@ -12,6 +14,10 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
+    .sass('resources/sass/app.scss', 'public/css')
+    .copy('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', 'public/js')
+
+
+.postCss('resources/css/app.css', 'public/css', [
         //
     ]);
