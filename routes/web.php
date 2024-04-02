@@ -23,6 +23,9 @@ Route::get('/', [StudentController::class, 'index'])->name('reservations.index')
 // Submitting the reservation form
 Route::post('/', [StudentController::class, 'store'])->name('reservations.store');
 
+Route::get('/departments/{college}', [StudentController::class, 'getDepartments'])->name('get.departments');
+
+
 // Admin dashboard and management
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
