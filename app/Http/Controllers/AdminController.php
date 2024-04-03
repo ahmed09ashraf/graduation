@@ -15,8 +15,6 @@ class AdminController extends Controller
         $departments = Department::all();
         $uniforms = Uniform::all();
 
-        session(['section' => 'departments']);
-
         return view('admin.admin', compact('colleges', 'departments', 'uniforms'));
     }
 

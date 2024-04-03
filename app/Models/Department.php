@@ -9,7 +9,15 @@ class Department extends Model
 {
     protected $fillable = ['name', 'college_id'];
 
-    public function college(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function college()
     {
         return $this->belongsTo(College::class);
-    }}
+    }
+
+// If students now have a direct relationship with departments
+    public function students()
+    {
+        return $this->hasMany(Student::class);
+    }
+
+}

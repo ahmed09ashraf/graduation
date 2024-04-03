@@ -1,0 +1,28 @@
+/* Custom styling for section buttons */
+.section-btn {
+    margin-top: 5px; /* Adjust top margin */
+    margin-bottom: 5px; /* Adjust bottom margin */
+    padding: 10px 20px; /* Adjust padding */
+    font-size: 16px; /* Adjust font size */
+    border-radius: 10px; /* Rounded corners */
+}
+
+
+/* Custom styling for active section button */
+#collegesBtn.active {
+    background-color: #007bff; /* Blue background color for active button */
+    border-color: #007bff; /* Blue border color for active button */
+    color: white; /* White text color for active button */
+}
+
+#departmentsBtn.active {
+    background-color: #6c757d; /* Grey background color for active button */
+    border-color: #6c757d; /* Grey border color for active button */
+    color: white; /* White text color for active button */
+}
+
+#uniformsBtn.active {
+    background-color: #28a745; /* Green background color for active button */
+    border-color: #28a745; /* Green border color for active button */
+    color: white; /* White text color for active button */
+}

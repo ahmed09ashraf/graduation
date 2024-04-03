@@ -23,6 +23,12 @@ Route::get('/', [StudentController::class, 'index'])->name('reservations.index')
 // Submitting the reservation form
 Route::post('/', [StudentController::class, 'store'])->name('reservations.store');
 
+
+// New routes for edit, update, and delete
+Route::get('/edit/{id}', [StudentController::class, 'edit'])->name('reservations.edit');
+Route::put('/update/{id}', [StudentController::class, 'update'])->name('reservations.update');
+Route::delete('/delete/{id}', [StudentController::class, 'delete'])->name('reservations.delete');
+
 Route::get('/departments/{college}', [StudentController::class, 'getDepartments'])->name('get.departments');
 
 

@@ -12,4 +12,11 @@ class College extends Model
     public function departments()
     {
         return $this->hasMany(Department::class);
-    }}
+    }
+
+// If students now have a direct relationship with departments
+    public function students()
+    {
+        return $this->hasMany(Student::class);
+    }
+}

@@ -1,0 +1,206 @@
+.hidden-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    padding: 0 15px;
+}
+
+.section-btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid transparent; /* make the border transparent by default */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* smooth transition for the color change */
+}
+
+#addReservationButton {
+    border-color: #007bff; /* Blue border color for active button */
+    color: #007bff; /* White text color for active button */
+}
+
+#showListButton {
+    border-color: #009879; /* Green border color for active button */
+    color: #009879; /* White text color for active button */
+}
+
+
+#addReservationButton:hover {
+    color:white ;
+    background-color: #007bff;
+}
+
+#showListButton:hover {
+    color:white ;
+    background-color: #009879;
+}
+
+/* Updated CSS for the active state of addReservationButton */
+#addReservationButton.active {
+    background-color: #007bff; /* Blue background color for active button */
+    border-color: #007bff; /* Blue border color to match the background */
+    color: white; /* White text color for active button */
+}
+
+/* Updated CSS for the active state of showListButton */
+#showListButton.active {
+    background-color:#009879; /* Green background color for active button */
+    border-color: #009879; /* Green border color to match the background */
+    color: white; /* White text color for active button */
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Add margin under the labels */
+    font-size: 1.2rem; /* Increase font size for better readability */
+}
+
+
+.smart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.smart-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: right;
+}
+.smart-table th,
+.smart-table td {
+    padding: 12px 15px;
+}
+.smart-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.smart-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.smart-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.smart-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+.btn-edit {
+    /*background-color: #ffcc00;*/
+    color: black;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="#333333" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M7 10l5 5 5-5H7z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.custom-multiselect {
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+}
+
+.multiselect-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    max-height: 200px; /* Adjust max-height as needed */
+    overflow-y: auto;
+}
+
+.selected-options {
+    margin-bottom: 5px;
+}
+
+.options-list label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.options-list input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
+/* Custom badge styles */
+.custom-badge {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    margin:3px ;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    background-color: #f0f0f0; /* Light gray background color */
+    color: #333; /* Dark gray text color */
+}
+
